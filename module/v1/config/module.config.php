@@ -48,6 +48,7 @@ return array(
     'controllers' => array(
         'factories' => array(
             'v1\Controller\Lists' => 'v1\Factory\ListsControllerFactory',
+            'v1\Controller\Tasks' => 'v1\Factory\TasksControllerFactory',
         )
     ),
 
