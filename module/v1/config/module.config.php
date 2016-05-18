@@ -75,7 +75,7 @@ return array(
             'lists' => array(
                 'type'    => 'Literal',
                 'options' => array(
-                    'route'    => '/v1/lists[/:id]',
+                    'route'    => '/v1/lists',
                     'constraints' => array(
                         'id'     => '[0-9]+',
                         'taskid' => '[0-9]+',
@@ -87,19 +87,19 @@ return array(
                 ),
             ),
 
-//            'list' => array(
-//                'type'    => 'Segment',
-//                'options' => array(
-//                    'route'    => '/v1/lists[/:id]',
-//                    'constraints' => array(
-//                        'id'     => '[0-9]+',
-//                    ),
-//                    'defaults' => array(
-//                        'controller' => 'v1\Controller\Lists',
-//                        'action'        => 'index',
-//                    ),
-//                ),
-//            ),
+            'list' => array(
+                'type'    => 'Segment',
+                'options' => array(
+                    'route'    => '/v1/lists[/:id]',
+                    'constraints' => array(
+                        'id'     => '[0-9]+',
+                    ),
+                    'defaults' => array(
+                        'controller' => 'v1\Controller\Lists',
+                        'action'        => 'index',
+                    ),
+                ),
+            ),
 
             'tasks' => array(
                 'type'    => 'Segment',
